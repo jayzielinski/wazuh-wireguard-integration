@@ -1,0 +1,38 @@
+<decoder name="wireguard-parent">
+  <prematch>^wireguard-log: </prematch>
+</decoder>
+
+<decoder name="wireguard-handshake-init">
+  <parent>wireguard-parent</parent>
+  <prematch>Receiving handshake initiation from peer </prematch>
+  <regex>peer (\d+) \((\S+:\d+)\)$</regex>
+  <order>id, srcip</order>
+</decoder>
+
+<decoder name="wireguard-invalid-handshake">
+  <parent>wireguard-parent</parent>
+  <prematch>Invalid handshake initiation from </prematch>
+  <regex>from (\S+:\d+)$</regex>
+  <order>srcip</order>
+</decoder>
+
+<decoder name="wireguard-unallowed-ip">
+  <parent>wireguard-parent</parent>
+  <prematch>Packet has unallowed src IP </prematch>
+  <regex>IP \((\S+)\) from peer (\d+) \((\S+:\d+)\)$</regex>
+  <order>srcip, id, dstip</order>
+</decoder>
+
+<decoder name="wireguard-keypair-created">
+  <parent>wireguard-parent</parent>
+  <prematch>Keypair \d+ created for peer </prematch>
+  <regex>for peer (\d+)$</regex>
+  <order>id</order>
+</decoder>
+
+<decoder name="wireguard-keypair-destroyed">
+  <parent>wireguard-parent</parent>
+  <prematch>Keypair \d+ destroyed for peer </prematch>
+  <regex>for peer (\d+)$</regex>
+  <order>id</order>
+</decoder>
