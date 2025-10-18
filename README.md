@@ -1,7 +1,7 @@
 # wazuh-wireguard-integration
 Wazuh Rules and Decoders for WireGuard Server (Linux)
 
-#How to install in Wazuh?
+How to install in Wazuh?
 
 1. Copy 130000-wireguard_decoders.xml to /var/ossec/etc/decoders/130000-wireguard_decoders.xml
 2. Copy 130000-wireguard_rules.xml to /var/ossec/etc/rules/130000-wireguard_rules.xml
