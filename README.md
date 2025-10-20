@@ -1,6 +1,6 @@
 # wazuh-wireguard-integration
 Wazuh Rules and Decoders for WireGuard Server (Linux)
-
+![Post logo](/images/posts/wazuh-wireguard-integration/post-logo.png "Wazuh & WireGuard Logs Monitoring on a Linux Host")
 ## Wazuh & WireGuard Logs Monitoring on a Linux Host
 
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. While its simplicity and performance are major advantages, one of its design choices is a minimalistic approach to logging. By default, WireGuard does not write detailed events to a dedicated log file, which can be a challenge for security monitoring.
